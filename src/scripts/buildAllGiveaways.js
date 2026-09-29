@@ -345,7 +345,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🎉 Giveaway Created & Launched !',
       description: 'The giveaway **' + prize + '** (' + giveaway.id + ') is active in ' + ctx.channel + ' !\\n• Duration : **' + durStr + '**\\n• Winners : **' + winnerCount + '**\\n• End : <t:' + Math.floor(giveaway.end_time / 1000) + ':R>',
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -356,7 +357,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🚀 Giveaway Started',
       description: 'The giveaway **' + gw.prize + '** (' + gw.id + ') is underway in <#' + gw.channel_id + '> !\\nScheduled end date : <t:' + Math.floor(gw.end_time / 1000) + ':R>',
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -368,7 +370,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🏁 Giveaway Ended Immediately',
       description: 'The giveaway for **' + gw.prize + '** (' + gw.id + ') has closed and the draw has taken place !',
-      color: 0xe67e22
+      color: 0xe67e22,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -380,7 +383,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🚫 Giveaway Cancelled',
       description: 'The giveaway for **' + gw.prize + '** (' + gw.id + ') was cancelled without a winner being named.',
-      color: 0xe74c3c
+      color: 0xe74c3c,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -392,7 +396,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '⏸️ Giveaway Paused',
       description: 'The giveaway for **' + gw.prize + '** (' + gw.id + ') has been paused. Inputs are suspended.',
-      color: 0xf39c12
+      color: 0xf39c12,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -404,7 +409,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '▶️ Giveaway Resumed',
       description: 'The giveaway for **' + gw.prize + '** (' + gw.id + ') resumed its normal course !',
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -417,7 +423,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🔄 Giveaway Restarted',
       description: 'The giveaway **' + gw.prize + '** (' + gw.id + ') was restarted for one hour !\\nNew ending : <t:' + Math.floor(newEnd / 1000) + ':R>',
-      color: 0x3498db
+      color: 0x3498db,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -431,7 +438,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '✏️ Giveaway Updated',
       description: 'The giveaway ' + gw.id + ' has been modified.\\n• New batch : **' + (newPrize || gw.prize) + '**',
-      color: 0x3498db
+      color: 0x3498db,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -452,7 +460,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '📋 Cloned Giveaway',
       description: 'The contest has been cloned under the ID ' + clone.id + ' for the lot **' + clone.prize + '** !',
-      color: 0x9b59b6
+      color: 0x9b59b6,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -471,7 +480,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '📑 Giveaway Copy Created',
       description: 'An exact copy (' + copy.id + ') was published in this salon !',
-      color: 0x9b59b6
+      color: 0x9b59b6,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -491,7 +501,8 @@ const customExecutors = {
         { name: 'Participants', value: '**' + entriesCount + '**', inline: true },
         { name: 'Contest over', value: '<t:' + Math.floor(gw.end_time / 1000) + ':F> (<t:' + Math.floor(gw.end_time / 1000) + ':R>)', inline: false }
       ],
-      color: 0x3498db
+      color: 0x3498db,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -501,7 +512,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '📊 Competition Status : ' + gw.prize,
       description: '• ID : \`' + gw.id + '\`\\n• State : **' + gw.status.toUpperCase() + '**\\n• End : <t:' + Math.floor(gw.end_time / 1000) + ':R>',
-      color: gw.status === 'active' ? 0x2ecc71 : 0xe74c3c
+      color: gw.status === 'active' ? 0x2ecc71 : 0xe74c3c,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -523,7 +535,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '📢 Giveaway Published',
       description: 'The competition for **' + gw.prize + '** was broadcast with its button in <#' + gw.channel_id + '> !',
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -537,7 +550,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🗑️ Giveaway Removed',
       description: 'The giveaway **' + gw.prize + '** (' + gw.id + ') and all its associated data have been purged.',
-      color: 0xe74c3c
+      color: 0xe74c3c,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -550,7 +564,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '📋 List of Giveaways (' + gws.length + ')',
       description: listStr,
-      color: 0x3498db
+      color: 0x3498db,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -563,7 +578,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🟢 Active Giveaways (' + gws.length + ')',
       description: desc,
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -576,7 +592,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🏁 Past Giveaways (' + gws.length + ')',
       description: desc,
-      color: 0x7f8c8d
+      color: 0x7f8c8d,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -587,7 +604,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🎲 Draw Conducted !',
       description: 'The draw for **' + gw.prize + '** designated : ' + (winners.length > 0 ? winners.map(w => '<@' + w + '>').join(', ') : 'No eligible participants.'),
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -598,7 +616,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🎲 Successful Reroll !',
       description: 'The new winner for **' + gw.prize + '** and : ' + (newWinners.length > 0 ? '<@' + newWinners[0] + '>' : 'No additional participants.'),
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -610,7 +629,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🏆 Winners : ' + gw.prize,
       description: 'Congratulations to : ' + winStr + ' !',
-      color: 0xf1c40f
+      color: 0xf1c40f,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -622,7 +642,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '👥 Participants : ' + gw.prize,
       description: desc,
-      color: 0x3498db
+      color: 0x3498db,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -633,7 +654,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '🎉 Participation Recorded !',
       description: 'You have now successfully participated in the competition for **' + gw.prize + '** !',
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -645,7 +667,8 @@ const customExecutors = {
     const embed = ctx.buildEmbed({
       title: '👋 Participation Cancelled',
       description: 'You have successfully left the competition.',
-      color: 0xe67e22
+      color: 0xe67e22,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `,
@@ -663,7 +686,8 @@ const customExecutors = {
         { name: 'Total Entries', value: '**' + entriesCount + '**', inline: true },
         { name: 'System Latency', value: ctx.client.ws.ping + 'ms', inline: true }
       ],
-      color: 0x2ecc71
+      color: 0x2ecc71,
+      footer: "developed with ❤️ by Saez"
     });
     return await ctx.reply({ embeds: [embed] });
   `
@@ -712,17 +736,14 @@ module.exports = {
   category: "Giveaways",
   aliases: [],
   usage: \`\${require('../../../config').prefix}${cmd.name} [paramètres]\`,
-
   async execute(message, args, client) {
     const cmd = giveawayRegistry.getCommand("${cmd.name}");
     if (!cmd) return;
-
     const ctx = new GiveawayContext(message, client, {
       commandName: "${cmd.name}",
       param: args.join(' '),
       targetUser: message.mentions?.users?.first() || null
     });
-
     try {
       await cmd.execute(ctx, client);
     } catch (err) {
