@@ -210,6 +210,7 @@ class ReminderService {
             { name: 'Category', value: `\`${rem.category}\``, inline: true },
             { name: 'Scheduled date', value: `<t:${Math.floor(rem.due_timestamp / 1000)}:F>`, inline: false }
           )
+          .setFooter({ text: "developed with ❤️ by Saez" })
           .setTimestamp();
         let delivered = false;
         if (rem.delivery_type === 'dm') {
