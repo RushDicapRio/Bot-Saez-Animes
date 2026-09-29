@@ -500,6 +500,7 @@ class AutoModService {
           .setColor(config.colors.warning || '#FEE75C')
           .setTitle('⚠️ AutoMod Warning')
           .setDescription(`Your message has been identified as a violation. : **${violation.reason}**.\nPlease respect the server rules.`)
+          .setFooter({ text: "developed with ❤️ by Saez"})
           .setTimestamp();
         await member.send({ embeds: [warnEmbed] }).catch(async () => {
           const tempMsg = await channel.send({ content: `${member}`, embeds: [warnEmbed] }).catch(() => {});
@@ -522,6 +523,7 @@ class AutoModService {
             { name: 'Applied action', value: `\`${violation.action.toUpperCase()}\``, inline: true },
             { name: 'Partial content', value: `\`\`\`${(content || '[No text]').slice(0, 300)}\`\`\``, inline: false }
           )
+          .setFooter({ text: "developed with ❤️ by Saez" })
           .setTimestamp();
         logChannel.send({ embeds: [alertEmbed] }).catch(() => {});
       }
