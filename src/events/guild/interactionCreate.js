@@ -36,6 +36,7 @@ module.exports = {
           .setColor(config.colors.warning)
           .setTitle('🛠️ Technical Maintenance')
           .setDescription(state.message || 'The bot is currently undergoing maintenance. Please wait.')
+          .setFooter({ text: "developed with ❤️ by Saez" })
           .setTimestamp();
         return interaction.reply({ embeds: [maintEmbed], flags: MessageFlags.Ephemeral });
       }
@@ -57,7 +58,8 @@ module.exports = {
       const errorEmbed = new EmbedBuilder()
         .setColor(config.colors.danger)
         .setTitle('❌ An error occurred.')
-        .setDescription('An unexpected error occurred while executing this command.');
+        .setDescription('An unexpected error occurred while executing this command.')
+        .setFooter({ text: "developed with ❤️ by Saez" });
       if (interaction.replied || interaction.deferred) {
         await interaction.followUp({ embeds: [errorEmbed], flags: MessageFlags.Ephemeral }).catch(() => {});
       } else {
