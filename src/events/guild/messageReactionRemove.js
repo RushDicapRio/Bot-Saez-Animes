@@ -38,7 +38,7 @@ module.exports = {
         } catch (_) {}
       }
     } catch (error) {
-      console.error('[Starboard ReactionRemove Error]:', error);
+      console.error('[Starboard ReactionRemove Error] :', error);
     }
   }
 };
