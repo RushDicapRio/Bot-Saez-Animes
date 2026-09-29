@@ -9,6 +9,7 @@ function createDevEmbed(title, description = '') {
   const embed = new EmbedBuilder()
     .setColor(config.colors.dev || 0x9B59B6)
     .setTitle(`🛠️ ${title}`)
+    .setFooter({ text: "developed with ❤️ by Saez" })
     .setTimestamp();
   if (description) {
     embed.setDescription(description);
@@ -38,6 +39,7 @@ function createStatusEmbed(type, title, message) {
     .setColor(colorMap[type] || config.colors.dev)
     .setTitle(`${iconMap[type] || '🔹'} ${title}`)
     .setDescription(message)
+    .setFooter({ text: "developed with ❤️ by Saez" })
     .setTimestamp();
 }
 /**
@@ -51,6 +53,7 @@ function createErrorEmbed(title, error) {
     .setColor(config.colors.danger || 0xED4245)
     .setTitle(`❌ ${title}`)
     .setDescription(`\`\`\`js\n${msg.substring(0, 1900)}\n\`\`\``)
+    .setFooter({ text: "developed with ❤️ by Saez" })
     .setTimestamp();
 }
 module.exports = {
