@@ -2,7 +2,7 @@ const WelcomeDispatcher = require('../../slash/welcome/core/welcomeDispatcher');
 const WelcomeContext = require('../../slash/welcome/core/welcomeContext');
 module.exports = {
   name: 'onboarding-questions',
-  description: 'Configurez les questions',
+  description: 'Configure the questions',
   category: 'welcome',
   aliases: [],
   async execute(client, message, args) {
