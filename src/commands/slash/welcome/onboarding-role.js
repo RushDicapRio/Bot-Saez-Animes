@@ -2,7 +2,7 @@ const WelcomeDispatcher = require('../../slash/welcome/core/welcomeDispatcher');
 const WelcomeContext = require('../../slash/welcome/core/welcomeContext');
 module.exports = {
   name: 'onboarding-roles',
-  description: 'Configurer les rôles proposés',
+  description: 'Configure the proposed roles',
   category: 'welcome',
   aliases: [],
   async execute(client, message, args) {
