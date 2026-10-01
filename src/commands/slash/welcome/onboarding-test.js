@@ -2,7 +2,7 @@ const WelcomeDispatcher = require('../../slash/welcome/core/welcomeDispatcher');
 const WelcomeContext = require('../../slash/welcome/core/welcomeContext');
 module.exports = {
   name: 'onboarding-test',
-  description: 'Teste le parcours d\'intégration',
+  description: 'Test the onboarding process.',
   category: 'welcome',
   aliases: [],
   async execute(client, message, args) {
